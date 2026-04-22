@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabzen - quiet tab management</title>
+  <link rel="icon" type="image/svg+xml" href="./tabzen-logo.svg" />
+  <link rel="stylesheet" href="./landing.css?v=20260421-zen25" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="zen-cursor" aria-hidden="true"></div>
+
+  <!-- ── Background decoration ── -->
+  <div class="bg-canvas" aria-hidden="true">
+    <div class="petal p1"></div>
+    <div class="petal p2"></div>
+    <div class="petal p3"></div>
+    <div class="petal p4"></div>
+    <div class="petal p5"></div>
+    <div class="petal p6"></div>
+    <div class="petal p7"></div>
+    <div class="petal p8"></div>
+    <div class="petal p9"></div>
+    <div class="petal p10"></div>
+    <div class="petal p11"></div>
+    <div class="petal p12"></div>
+    <div class="glow-orb g1"></div>
+    <div class="glow-orb g2"></div>
+    <div class="glow-orb g3"></div>
+    <div class="glow-orb g4"></div>
+    <div class="glow-orb g5"></div>
+    <div class="glass-orb glass-orb-main" aria-hidden="true">
+      <div class="glass-orb-liquid"></div>
+    </div>
+    <div class="glass-orb-lite orb-a" aria-hidden="true"></div>
+    <div class="glass-orb-lite orb-b" aria-hidden="true"></div>
+    <div class="glass-orb-lite orb-c" aria-hidden="true"></div>
+    <div class="ripple-field"></div>
+    <div class="dust-field"></div>
+  </div>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <a class="nav-logo" href="#" aria-label="tabzen home">
+      <img src="./tabzen-logo.svg" alt="tabzen" />
+      <span class="brand-wordmark">TABZEN</span>
+    </a>
+    <a class="nav-cta" href="#">ADD TO CHROME</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">for Chrome</div>
+        <h1 class="hero-headline">
+          Your browser,<br />
+          <em>at ease.</em>
+        </h1>
+        <p class="hero-sub">
+          Tabs quietly sorted. Distractions set aside.<br class="br-desk" />
+          A calmer browser, whenever you need one.
+        </p>
+        <a class="btn-primary" href="#">ADD TO CHROME</a>
+        <div class="hero-footnote">No account &nbsp;·&nbsp; Chrome &amp; Arc</div>
+
+        <div class="hero-preview-strip" aria-hidden="true">
+          <article class="hero-peek hero-peek-timer">
+            <div class="hero-peek-tag">ZEN TIMER</div>
+            <div class="hero-peek-time" data-demo-timer>00:09</div>
+            <div class="hero-peek-bar"><span style="--w: 76%"></span></div>
+          </article>
+
+          <article class="hero-peek hero-peek-theme" data-theme-demo>
+            <div class="hero-peek-head">
+              <span class="hero-peek-tag">LIGHT / DARK</span>
+              <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle preview theme">Light</button>
+            </div>
+            <div class="hero-peek-theme-ui">
+              <span></span><span></span><span class="short"></span>
+            </div>
+          </article>
+
+          <article class="hero-peek hero-peek-restore">
+            <div class="hero-peek-tag">SESSION RESTORE</div>
+            <div class="hero-peek-list">
+              <span>Roadmap · Q2 2026</span>
+              <span>Reading list · 4 articles</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="mockup-wrap" aria-hidden="true">
+          <div class="mockup-browser">
+            <div class="mockup-bar">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <div class="mockup-url">chrome://newtab</div>
+            </div>
+            <div class="mockup-body">
+              <div class="panel-header">
+                <span class="panel-title" aria-label="tabzen brand">
+                  <img src="./tabzen-logo.svg" alt="tabzen" />
+                  <span class="brand-wordmark brand-wordmark--panel">TABZEN</span>
+                </span>
+                <div class="panel-tabs-row">
+                  <span class="ptab active">Current</span>
+                  <span class="ptab">Saved</span>
+                  <span class="ptab">Groups</span>
+                </div>
+              </div>
+              <div class="tab-list">
+                <div class="tab-row tab-row--active"><div class="fav"></div><div class="tab-info"><div class="tab-title">Linear – Roadmap</div><div class="tab-url">linear.app</div></div><div class="leaf leaf--green"></div></div>
+                <div class="tab-row"><div class="fav fav-yt"></div><div class="tab-info"><div class="tab-title">YouTube</div><div class="tab-url">youtube.com</div></div><div class="leaf leaf--yellow"></div></div>
+                <div class="tab-row"><div class="fav"></div><div class="tab-info"><div class="tab-title">Figma – Design system</div><div class="tab-url">figma.com</div></div><div class="leaf leaf--green"></div></div>
+                <div class="tab-row"><div class="fav fav-x"></div><div class="tab-info"><div class="tab-title">X / Twitter</div><div class="tab-url">x.com</div></div><div class="leaf leaf--red"></div></div>
+                <div class="tab-row"><div class="fav"></div><div class="tab-info"><div class="tab-title">Notion – Weekly notes</div><div class="tab-url">notion.so</div></div><div class="leaf leaf--green"></div></div>
+              </div>
+              <div class="zen-bar">
+                <div class="zen-orb"></div>
+                <span class="zen-label">Enter Zen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ── PROBLEM STATEMENT ── -->
+  <section class="problem" id="problem">
+    <div class="problem-grid">
+      <div class="problem-copy">
+        <div class="section-tag">Problem statement</div>
+        <h2 class="section-title">Too many tabs?<br/>Not enough attention?</h2>
+        <p class="problem-lead">When every tab feels urgent, focus fades.</p>
+
+        <ul class="problem-questions">
+          <li>Keeps the right tabs close.</li>
+          <li>Sets distractions aside.</li>
+          <li>Brings everything back fast.</li>
+        </ul>
+      </div>
+
+      <div class="problem-visual" aria-hidden="true">
+        <div class="problem-product-card">
+          <div class="pp-top">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+            <span class="pp-url">chrome://newtab</span>
+          </div>
+          <div class="pp-head">
+            <span class="pp-logo" aria-label="tabzen brand">
+              <img src="./tabzen-logo.svg" alt="tabzen" />
+              <span class="brand-wordmark brand-wordmark--panel">TABZEN</span>
+            </span>
+            <div class="pp-tabs"><span class="active">Current</span><span>Saved</span><span>Groups</span></div>
+          </div>
+
+          <div class="pp-list">
+            <div class="pp-row"><span class="pp-fav"></span><div class="pp-txt"><b>Linear - Roadmap</b><small>linear.app</small></div><i class="leaf leaf--green"></i></div>
+            <div class="pp-row"><span class="pp-fav"></span><div class="pp-txt"><b>YouTube</b><small>youtube.com</small></div><i class="leaf leaf--yellow"></i></div>
+            <div class="pp-row"><span class="pp-fav"></span><div class="pp-txt"><b>Notion - Weekly notes</b><small>notion.so</small></div><i class="leaf leaf--green"></i></div>
+          </div>
+
+          <div class="pp-foot">
+            <span class="pp-orb"></span>
+            <span>Enter Zen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ── FEATURES ── -->
+  <section class="features" id="features">
+    <div class="section-tag">What it does</div>
+    <h2 class="section-title">Quiet tools for<br/>a calmer browser.</h2>
+    <p class="problem-lead"><a href="./features.html">View the interactive feature walkthrough</a></p>
+
+    <div class="feature-grid">
+
+      <div class="feature-card feature-card--wide">
+        <div class="fc-icon">🌿</div>
+        <h3>Gentle cleanup</h3>
+        <p>Tabs untouched for days rise softly to the surface. Save or let go — at your own pace, no pressure.</p>
+        <div class="fc-detail">
+          <div class="stale-pill stale-pill--red">14d · x.com</div>
+          <div class="stale-pill stale-pill--orange">7d · reddit.com</div>
+          <div class="stale-pill stale-pill--yellow">3d · youtube.com</div>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-icon">🧘</div>
+        <h3>Zen mode</h3>
+        <p>One tap. Distractions fold away. Only what matters stays open. Everything else waits, safe and retrievable.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-icon">🗂</div>
+        <h3>Smart groups</h3>
+        <p>Tabs find their own clusters quietly — Work, Research, Reading. The right one is usually nearby.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="fc-icon">🎨</div>
+        <h3>Free hue and theme color</h3>
+        <p>Freely shift hue and pick any theme color. tabzen updates instantly and keeps your personalized look quietly in the background.</p>
+      </div>
+
+      <div class="feature-card feature-card--wide">
+        <div class="fc-icon">📦</div>
+        <h3>Save, drag, return</h3>
+        <p>Drag tabs between windows. Save a whole session in one click. They wait quietly until you come back.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="how" id="how">
+    <div class="section-tag">How it works</div>
+    <h2 class="section-title">Three small moments.<br/>A quieter day.</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Open the panel</h3>
+        <p>Pin tabzen to your toolbar. The side panel opens quietly — tabs sorted and colour-aged at a glance.</p>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Settle what you don't need</h3>
+        <p>Sweep stale tabs or save a group for later. Drag between windows. Nothing disappears until you decide.</p>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Enter Zen</h3>
+        <p>Tap the orb. Distractions move aside. What matters stays. The rest waits safely nearby.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRODUCT SHOWCASE ── -->
+  <section class="showcase" id="showcase">
+    <div class="section-tag">Product glimpses</div>
+    <h2 class="section-title">A few quiet moments<br/>from tabzen.</h2>
+
+    <div class="showcase-grid">
+      <article class="demo-card demo-zen">
+        <div class="demo-head">
+          <span class="demo-chip">ZEN MODE ACTIVE</span>
+          <span class="demo-chip demo-chip-soft">focus queue</span>
+        </div>
+        <div class="demo-timer" data-demo-clock>00:09</div>
+        <p class="demo-copy">Distractions parked. Focus open. Time flows.</p>
+        <div class="demo-meter">
+          <span style="--w: 80%"></span>
+        </div>
+        <ul class="demo-tabs">
+          <li><span>tabzen.io — focus mode</span><em>9s</em></li>
+          <li><span>docs.stripe.com — payments</span><em>3m</em></li>
+          <li><span>figma.com — ui review</span><em>7m</em></li>
+        </ul>
+      </article>
+
+      <article class="demo-card theme-demo" data-theme-card>
+        <div class="demo-head">
+          <span class="demo-chip">THEME SWITCH</span>
+          <button class="theme-toggle" data-theme-card-toggle type="button" aria-label="Toggle preview theme">Light</button>
+        </div>
+        <div class="theme-preview">
+          <div class="theme-topbar"></div>
+          <div class="theme-row"><span class="theme-dot"></span><span class="theme-line"></span></div>
+          <div class="theme-row"><span class="theme-dot"></span><span class="theme-line"></span></div>
+          <div class="theme-row"><span class="theme-dot"></span><span class="theme-line short"></span></div>
+        </div>
+        <p class="demo-copy">Light or dark, one tap. The same calm palette either way.</p>
+      </article>
+
+      <article class="demo-card demo-queue">
+        <div class="demo-head">
+          <span class="demo-chip">SESSION RESTORE</span>
+          <span class="demo-chip demo-chip-soft">2 tabs recovered</span>
+        </div>
+        <p class="demo-copy">Your parked tabs, ready when you surface.</p>
+        <div class="queue-rows">
+          <div class="queue-row"><span class="queue-fav"></span><span>Roadmap planning 2026</span></div>
+          <div class="queue-row"><span class="queue-fav alt"></span><span>Article — saved for later</span></div>
+          <div class="queue-row"><span class="queue-fav"></span><span>Pricing compare sheet</span></div>
+        </div>
+        <a class="queue-action" href="#">Done</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ── ZEN CALLOUT ── -->
+  <section class="callout">
+    <div class="callout-inner">
+      <div class="callout-orb" aria-hidden="true">
+        <div class="orb-ring r1"></div>
+        <div class="orb-ring r2"></div>
+        <div class="orb-ring r3"></div>
+        <div class="orb-core"></div>
+      </div>
+      <h2>Nothing lost,<br/><em>everything resting.</em></h2>
+      <p>Zen mode parks what you don't need. Your desk clears. Everything waits — quiet, safe, ready when you return.</p>
+      <a class="btn-primary btn-primary--light" href="#">ENTER ZEN</a>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="final-cta">
+    <h2>A calmer browser,<br/>when you need it.</h2>
+    <p>Free. No account. No tracking.</p>
+    <a class="btn-primary btn-primary--large" href="#">ADD TABZEN TO CHROME</a>
+    <div class="final-footnote">Chrome Web Store &nbsp;·&nbsp; < 1 MB &nbsp;·&nbsp; Open source</div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <span class="footer-logo" aria-label="tabzen brand">
+      <img src="./tabzen-logo.svg" alt="tabzen" />
+      <span class="brand-wordmark">TABZEN</span>
+    </span>
+    <div class="footer-links">
+      <a href="./privacy.html">Privacy</a>
+      <a href="mailto:siyukath@gmail.com">Contact</a>
+    </div>
+  </footer>
+
+  <script src="./landing.js?v=20260421-zen4"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tabzen privacy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f8f8f2;
+      --text: #23312c;
+      --muted: #5c746b;
+      --line: rgba(126, 154, 132, 0.18);
+      --glass: rgba(255,255,255,0.56);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(38% 50% at 10% 22%, rgba(248,221,150,0.36) 0%, transparent 72%),
+        radial-gradient(42% 56% at 88% 18%, rgba(200,232,222,0.36) 0%, transparent 76%),
+        linear-gradient(180deg, #fdfcf7 0%, #f8f8f2 100%);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: min(760px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 96px 0 72px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 28px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-family: "DM Serif Display", serif;
+      font-size: clamp(40px, 7vw, 64px);
+      line-height: 1.04;
+      font-weight: 400;
+      margin: 0 0 18px;
+    }
+
+    .lead {
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: none;
+      white-space: nowrap;
+      margin: 0 0 32px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(165deg, rgba(255,255,255,0.62) 0%, rgba(238,246,240,0.52) 54%, rgba(245,234,228,0.44) 100%);
+      border: 1px solid rgba(255,255,255,0.34);
+      border-radius: 24px;
+      padding: 28px 24px;
+      backdrop-filter: blur(24px) saturate(1.08);
+      box-shadow: 0 14px 36px rgba(166,184,180,0.14), inset 0 1px 0 rgba(255,255,255,0.88);
+    }
+
+    .card + .card { margin-top: 16px; }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(255,255,255,0.36), transparent 42%, rgba(255,255,255,0.16) 72%, transparent 100%);
+      pointer-events: none;
+    }
+
+    h2 {
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #6d8a7e;
+      margin: 0 0 10px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #476157;
+    }
+
+    .foot {
+      margin-top: 18px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .foot a {
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="./index.html">Back to tabzen</a>
+    <h1>Privacy, quietly.</h1>
+    <p class="lead">tabzen is designed to help you manage tabs, not collect personal data.</p>
+
+    <section class="card">
+      <h2>What tabzen stores</h2>
+      <p>Your saved tabs, groups, and local preferences may be stored in your browser so the extension can work properly for you.</p>
+    </section>
+
+    <section class="card">
+      <h2>What tabzen does not do</h2>
+      <p>tabzen does not require an account, does not sell your data, and does not use your browsing activity for advertising.</p>
+    </section>
+
+    <section class="card">
+      <h2>AI features</h2>
+      <p>If AI-assisted grouping or analysis is enabled, only the information needed for that feature is processed. This should remain limited to helping organize tabs and improve the in-product experience.</p>
+    </section>
+
+    <div class="foot">Last updated: April 21, 2026</div>
+  </main>
+</body>
+</html>
