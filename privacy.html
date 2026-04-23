@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tabzen privacy</title>
+  <link rel="icon" type="image/svg+xml" href="./tabzen-logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
@@ -59,7 +60,6 @@
       line-height: 1.7;
       color: var(--muted);
       max-width: none;
-      white-space: nowrap;
       margin: 0 0 32px;
     }
 
@@ -100,6 +100,18 @@
       color: #476157;
     }
 
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #476157;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .card li + li {
+      margin-top: 6px;
+    }
+
     .foot {
       margin-top: 18px;
       font-size: 14px;
@@ -115,24 +127,112 @@
   <main class="wrap">
     <a class="back" href="./index.html">Back to tabzen</a>
     <h1>Privacy, quietly.</h1>
-    <p class="lead">tabzen is designed to help you manage tabs, not collect personal data.</p>
+    <p class="lead">tabzen is built for calm tab management, with data minimized and user control first.</p>
 
     <section class="card">
-      <h2>What tabzen stores</h2>
-      <p>Your saved tabs, groups, and local preferences may be stored in your browser so the extension can work properly for you.</p>
+      <h2>Overview</h2>
+      <p>This policy explains what tabzen processes, where data is stored, and how privacy is protected. tabzen is a browser-side productivity extension with local Smart Group and local analysis. Core use does not require an account.</p>
     </section>
 
     <section class="card">
-      <h2>What tabzen does not do</h2>
-      <p>tabzen does not require an account, does not sell your data, and does not use your browsing activity for advertising.</p>
+      <h2>Local-First Processing</h2>
+      <ul>
+        <li>tabzen uses local Smart Group and local analysis to organize tabs.</li>
+        <li>Core grouping, scoring, and cleanup decisions are computed inside your browser environment.</li>
+        <li>tabzen does not require external analysis endpoints for normal operation.</li>
+      </ul>
     </section>
 
     <section class="card">
-      <h2>AI features</h2>
-      <p>If AI-assisted grouping or analysis is enabled, only the information needed for that feature is processed. This should remain limited to helping organize tabs and improve the in-product experience.</p>
+      <h2>Data We Store Locally</h2>
+      <ul>
+        <li>Saved tabs and archive items (title, URL, favicon, timestamps).</li>
+        <li>Tab history signals used for prioritization and stale-tab cleanup.</li>
+        <li>User preferences such as grouping keywords, priority sites, cleanup defaults, and appearance settings.</li>
+        <li>Zen Mode session state needed to restore tabs you intentionally parked.</li>
+      </ul>
     </section>
 
-    <div class="foot">Last updated: April 21, 2026</div>
+    <section class="card">
+      <h2>Where Data Lives</h2>
+      <ul>
+        <li>Extension data is stored in your browser's extension storage and local IndexedDB area.</li>
+        <li>tabzen does not run a personal cloud account for syncing your tab history.</li>
+        <li>Your data remains tied to your local browser profile unless you export or sync via browser-level tools you control.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Permissions and Why They Are Used</h2>
+      <ul>
+        <li><strong>tabs</strong>: read tab metadata and perform tab actions you trigger (focus, close, move, pin).</li>
+        <li><strong>storage</strong>: persist your local settings and saved state.</li>
+        <li><strong>sidePanel</strong>: display tabzen in Chrome side panel.</li>
+        <li><strong>sessions</strong>: recover recently closed sessions for user-invoked undo.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Network Access</h2>
+      <ul>
+        <li>tabzen does not need broad host access to read website content.</li>
+        <li>tab data organization is designed to run locally without sending page bodies for analysis.</li>
+        <li>When opening websites in your browser, network traffic is handled by Chrome as part of normal browsing, not by tabzen as a data broker.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>What We Do Not Do</h2>
+      <ul>
+        <li>No account sign-up required for core usage.</li>
+        <li>No sale of personal data.</li>
+        <li>No ad targeting based on your browsing activity.</li>
+        <li>No hidden background data collection beyond the features you use.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Data Retention</h2>
+      <ul>
+        <li>Saved tabs and history remain until you remove them or uninstall the extension.</li>
+        <li>Zen temporary queue items are intended to be restored and cleared as part of the Zen workflow.</li>
+        <li>You can reset or clear local records at any time from the extension interface.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Security Posture</h2>
+      <ul>
+        <li>tabzen follows minimum-permission design and only requests capabilities needed for tab management features.</li>
+        <li>No credential vault is required for core local features.</li>
+        <li>We aim to reduce data movement and keep processing close to the browser runtime.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>User Control</h2>
+      <ul>
+        <li>You can clear saved tabs and local records from the extension UI.</li>
+        <li>You can uninstall the extension to remove its runtime access.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Children's Privacy</h2>
+      <p>tabzen is not intended to collect personal information from children. If you believe sensitive personal data was stored unintentionally in tab titles or URLs, remove those records locally and uninstall the extension if needed.</p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p>For privacy questions, contact: <a href="mailto:siyukath@gmail.com">siyukath@gmail.com</a>.</p>
+    </section>
+
+    <section class="card">
+      <h2>Policy Updates</h2>
+      <p>If this policy changes, the date below will be updated and the revised policy will be published on this page.</p>
+    </section>
+
+    <div class="foot">Last updated: April 22, 2026</div>
   </main>
 </body>
 </html>
